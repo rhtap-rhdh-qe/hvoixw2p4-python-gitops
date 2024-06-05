@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hvoixw2p4-python-gitops
+  description: This is GitOps manifest for hvoixw2p4-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: hvoixw2p4-python
+    janus-idp.io/tekton: hvoixw2p4-python 
+    backstage.io/kubernetes-id: hvoixw2p4-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hvoixw2p4-python
